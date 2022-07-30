@@ -364,7 +364,9 @@ export default {
         if (response != undefined) {
           this.courseWebVo = response.data.data.courseWebVo;
           this.chapterVideoList = response.data.data.chapterVideoList;
-          this.firstVideoSourceId = response.data.data.chapterVideoList[0].children[0].videoSourceId
+          if(response.data.data.chapterVideoList.length > 0){
+            this.firstVideoSourceId = response.data.data.chapterVideoList[0].children[0].videoSourceId
+          }
           this.isBuy = response.data.data.isBuy;
         }
       });

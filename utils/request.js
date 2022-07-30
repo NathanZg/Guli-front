@@ -29,7 +29,7 @@ service.interceptors.response.use(
             setTimeout(() => {
                 if (process.client){
                     //this.$router.push({path:"/login?callback="+response.data.data.courseWebVo.id})
-                    window.location.href = "/login?backcourse="+response.data.data.courseWebVo.id
+                    window.location.href = "/login?backcourse="+response.data.data.courseId
                 }
             }, 1000);
             return
